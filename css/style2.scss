@@ -61,7 +61,7 @@ $screen-xl-min: 1200px;
         }
     
     #header {
-        background-color:#F6F6F6;
+        
         h1 {
         font-size: 3rem;
         font-weight: 700;
@@ -98,7 +98,7 @@ $screen-xl-min: 1200px;
     }
 
     #aboutme {
-        background-color: #F6F6F6;
+        
     }
     .sectiontitle { 
         h2 {
@@ -277,6 +277,10 @@ $screen-xl-min: 1200px;
                 text-align:center;
             }
         }
+    }
+    .contact {
+        background-color: $main-color;
+        height: 300px;
     }
     .project {
         display: flex;

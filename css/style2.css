@@ -5,39 +5,34 @@ body {
   font-family: "Source Code Pro", monospace;
   overflow-x: hidden; }
 
-#header {
-  background-color: #F6F6F6; }
-  #header h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    font-family: "Tiempos", serif; }
-    @media (min-width: 576px) {
-      #header h1 {
-        font-size: 64px; } }
-  #header .social {
-    position: absolute;
-    color: black; }
-    @media (max-width: 576px) {
-      #header .social {
-        bottom: 5px;
-        left: 50%;
-        transform: translateX(-50%); } }
-    #header .social div {
-      display: inline-block;
-      margin-right: 15px; }
-    @media (min-width: 768px) {
-      #header .social {
-        right: 0;
-        margin-right: 16px;
-        top: 50%;
-        transform: translateY(-50%); }
-        #header .social div {
-          margin-bottom: 15px;
-          margin-right: 0;
-          display: block; } }
-
-#aboutme {
-  background-color: #F6F6F6; }
+#header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "Tiempos", serif; }
+  @media (min-width: 576px) {
+    #header h1 {
+      font-size: 64px; } }
+#header .social {
+  position: absolute;
+  color: black; }
+  @media (max-width: 576px) {
+    #header .social {
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%); } }
+  #header .social div {
+    display: inline-block;
+    margin-right: 15px; }
+  @media (min-width: 768px) {
+    #header .social {
+      right: 0;
+      margin-right: 16px;
+      top: 50%;
+      transform: translateY(-50%); }
+      #header .social div {
+        margin-bottom: 15px;
+        margin-right: 0;
+        display: block; } }
 
 .sectiontitle h2 {
   font-family: "Tiempos", serif;
@@ -191,6 +186,10 @@ mark::after {
   @media (max-width: 576px) {
     .myself div:nth-child(2) {
       text-align: center; } }
+
+.contact {
+  background-color: #B1F8F2;
+  height: 300px; }
 
 .project {
   display: flex;

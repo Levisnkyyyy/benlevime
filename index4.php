@@ -38,7 +38,18 @@
 <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z" fill="#1040e2"/><path d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z"/></svg>
 -->
 
-
+<svg  class="uk-position-absolute shapes" height="5353" viewBox="0 0 360 5353" width="360" xmlns="http://www.w3.org/2000/svg">
+    <g _ngcontent-c3="" fill="none" fill-rule="evenodd" id="Page-1">
+    <g _ngcontent-c3="" id="shape_1-copy-2" transform="rotate(68 -72.02 401.706)"><g _ngcontent-c3="" id="Group-6-Copy-2"><path _ngcontent-c3="" d="M13.915 14.124l-8.887 4.197a.41.41 0 0 1-.549-.2L.331 9.13a.42.42 0 0 1 .2-.556L9.415 4.38a.411.411 0 0 1 .55.201l4.148 8.99a.42.42 0 0 1-.2.554" fill="#2E6BD1" id="Fill-17" opacity=".2"></path><path _ngcontent-c3="" d="M15.524 10.198l-9.634 4.55-4.498-9.745 9.634-4.55z" id="Stroke-19" stroke="#2E6BD1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></g></g>
+    <g _ngcontent-c3="" id="shape_3-copy" transform="rotate(42 -40.953 95.763)"><g _ngcontent-c3="" id="Group-2-Copy-5"><path _ngcontent-c3="" d="M14.592 2.48L3.06 3.75a.315.315 0 0 0-.225.503l6.89 9.153a.326.326 0 0 0 .556-.062l4.644-10.423a.318.318 0 0 0-.333-.441" fill="#2EC5B6" id="Fill-1" opacity=".2"></path><path _ngcontent-c3="" d="M13.355.072L.71 1.465l7.554 10.037z" id="Stroke-3" stroke="#2EC5B6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></g></g>
+    <g _ngcontent-c3="" id="shape_4-copy-2" stroke="#2E6BD1" stroke-linecap="round" transform="rotate(-28 525.598 96.965)"><g _ngcontent-c3="" id="Group" stroke-width="2"><path _ngcontent-c3="" d="M5.85 0v11.7M11.7 5.85H0" id="Path-4"></path><path _ngcontent-c3="" d="M7.15 1.3V13M13 7.15H1.3" id="Path-4" opacity=".2"></path></g></g>
+    <g _ngcontent-c3="" id="shape_3" transform="translate(154 391)"><g _ngcontent-c3="" id="Group-2-Copy-5"><path _ngcontent-c3="" d="M13.62 2.302L2.856 3.482a.293.293 0 0 0-.21.467l6.43 8.5c.138.182.427.15.52-.058l4.334-9.678c.093-.208-.08-.436-.31-.41" fill="#FF9F1C" id="Fill-1" opacity=".2"></path><path _ngcontent-c3="" d="M12.465.067L.662 1.361l7.05 9.32z" id="Stroke-3" stroke="#FF9F1C" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></g></g>
+    <g _ngcontent-c3="" id="shape_1" transform="translate(180)"><g _ngcontent-c3="" id="Group-6-Copy-2"><path _ngcontent-c3="" d="M14.784 14.868l-9.441 4.418a.438.438 0 0 1-.584-.212L.352 9.61a.44.44 0 0 1 .211-.585l9.442-4.417a.439.439 0 0 1 .583.212l4.408 9.463a.44.44 0 0 1-.212.584" fill="#FF9F1C" fill-opacity=".2" id="Fill-17"></path><path _ngcontent-c3="" d="M16.494 10.735l-10.236 4.79-4.78-10.259L11.716.476z" id="Stroke-19" stroke="#FF9F1C" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></g></g>
+    <g _ngcontent-c3="" id="shape_5-copy-2" stroke="#2E6BD1" stroke-linecap="round" stroke-linejoin="round" transform="translate(0 463)"><g _ngcontent-c3="" id="Group" stroke-width="2"><path _ngcontent-c3="" d="M0 8.87L8.09.685l7.878 8.185 7.236-7.517 7.883 8.19 7.424-7.713 7.44 7.729" id="Path-7"></path><path _ngcontent-c3="" d="M2.625 8.87l8.09-8.185 7.878 8.185 7.236-7.517 7.883 8.19 7.424-7.713 7.44 7.729" id="Path-7" opacity=".2"></path></g></g>
+    <g _ngcontent-c3="" id="shape_3-copy" transform="translate(267 482)"><g _ngcontent-c3="" id="Group-2-Copy-5"><path _ngcontent-c3="" d="M12.647 2.302l-9.995 1.18c-.215.026-.323.285-.195.467l5.971 8.5c.128.182.396.15.482-.058l4.025-9.678c.086-.208-.074-.436-.288-.41" fill="#2EC5B6" id="Fill-1" opacity=".2"></path><path _ngcontent-c3="" d="M11.575.067L.615 1.361l6.546 9.32z" id="Stroke-3" stroke="#2EC5B6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></g></g>
+    <g _ngcontent-c3="" id="shape_2-copy-3" transform="translate(23 681)"><g _ngcontent-c3="" id="Group-4-Copy-3"><path _ngcontent-c3="" d="M10.774 5.66a5.094 5.094 0 1 1-10.188 0 5.094 5.094 0 0 1 10.188 0" fill="#2E6BD1" id="Fill-9" opacity=".2"></path><path _ngcontent-c3="" d="M12.724 7.61a5.094 5.094 0 1 1-10.188 0 5.094 5.094 0 0 1 10.188 0z" id="Stroke-11" stroke="#2E6BD1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></g></g>
+</g>
+</svg>
 
 	<div class="uk-section uk-position-relative" id="header" style=" background-color: ; padding-top: 20px !important;   " uk-height-viewport="offset-top: true; ">
         <div class="topbar">
@@ -215,6 +226,8 @@
                 $(".myself div:first-child").removeAttr('data-aos','');
                 $(".myself div:nth-child(2)").removeAttr('data-aos','');
             }
+            $(".shapes").attr('width', wwidth);
+            $(".shapes").attr('viewBox', '0 0 '+wwidth+' 5252');
 			AOS.init();
 			
 
