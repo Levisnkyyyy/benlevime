@@ -60,6 +60,197 @@ $screen-xl-min: 1200px;
         overflow-x: hidden;
         }
     
+    .outercircle, .innercircle {
+        position: fixed;
+        z-index: 10;
+        right: 0;
+        transform: scale(0.0);
+        transition: transform 500ms;
+        transition-timing-function: ease-in-out;
+        .ycircle {
+            opacity: 0.8;
+        }
+    }
+    .innercircle {
+        z-index: 11;
+        transition-delay: 300ms;
+    }
+    .fullnav {
+        position: fixed;
+        background-color: white;
+        z-index: 12;
+        height: 100vh;
+        width: 100%;
+         opacity: 0;
+        display: none;
+
+        div {
+            
+        }
+        .uk-container {
+            @include lg{
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-evenly;
+                align-items: baseline;
+            }
+        }
+        .m-button {
+            position: absolute;
+            right: 0;
+            margin: 15px 15px 0 0;
+            padding: 0 15px;
+            line-height: 35px;
+            height: auto;
+            background-color: $main-color;
+            img {
+                width: 17px;
+            }
+            @include sm {
+
+            }
+        }
+        .biglogo {
+            width: 100%;
+            text-align: center;
+            padding-top: 60px;
+            object {
+                width: 60px;
+                vertical-align: sub;
+            }
+            span {
+                font-weight: bolder;
+                color: black;
+                display: block;
+                font-size: 12px;
+                font-family: $second-font;
+            }
+           /* @include lg {
+                text-align: left;
+                width: 33%;
+                display: inline-block;
+                margin-top: 200px;
+            }*/
+            @include lg {
+                width: auto;
+                flex-basis: 80%;
+                object {
+                    width: 100px;
+
+                }
+            }
+        }
+        .menuitems {
+            width: 100%;
+            text-align: center;
+            
+            margin-top: 30px;
+            /*@include lg {
+                text-align: left;
+                width: 33%;
+                display: inline-block;
+                position: relative;
+            }*/
+            @include lg {
+                padding: 0 100px 0 250px;
+            }
+            ul {
+                padding-left: 0 !important;
+                list-style-type: none;
+                li {
+                    position: relative;
+                    margin-bottom: 20px;
+                    text-align: left;
+                    color: black;
+                    text-transform: uppercase;
+                    font-size: 19px;
+                    padding: 5px 0 5px 5px;
+                    &.selected {
+                      
+                       color: black;
+                       font-weight: bolder; 
+                       &::before {
+                            right: 0;
+                       }
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        background-color: $main-color;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 100%;
+                        transition: right 0.2s ease-in-out;
+                        z-index: -1;
+
+                    }
+                    &:hover::before {
+                        right: 0;
+                    }
+                    
+                }
+            }
+        }
+        @include lg {
+            hr {
+                display: none;
+            }
+        }
+        .footer {
+            text-align: center;
+            /*@include lg {
+                width: 30%;
+                display: inline-block;
+                position: relative;
+            }*/
+            @include lg {
+                width: 100%;
+            }
+            h4 {
+                font-family: $main-font;
+                font-size: 17px;
+                margin-bottom: 0;
+                color: black;
+            }
+            p {
+                font-family: $main-font;
+                color:gray;
+                margin-top: 0;
+                font-size: 13px;
+            }
+            table {
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 13px;
+                tr {
+                    td{
+                        text-align: left;
+                        padding-left: 10px;
+                        a {
+                            text-decoration: none;
+                            color: gray;
+                        }
+                        i{
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    @keyframes showmenu {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+    @keyframes hidemenu {
+        from {opacity: 1;}
+        to {opacity: 0;}
+    }
+    .disableScroll {
+        margin: 0 !important; height: 100% !important; overflow: hidden !important;
+    }
     #header {
         
         h1 {

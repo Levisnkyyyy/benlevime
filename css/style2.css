@@ -5,6 +5,161 @@ body {
   font-family: "Source Code Pro", monospace;
   overflow-x: hidden; }
 
+.outercircle, .innercircle {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  transform: scale(0);
+  transition: transform 500ms;
+  transition-timing-function: ease-in-out; }
+  .outercircle .ycircle, .innercircle .ycircle {
+    opacity: 0.8; }
+
+.innercircle {
+  z-index: 11;
+  transition-delay: 300ms; }
+
+.fullnav {
+  position: fixed;
+  background-color: white;
+  z-index: 12;
+  height: 100vh;
+  width: 100%;
+  opacity: 0;
+  display: none; }
+  @media (min-width: 992px) {
+    .fullnav .uk-container {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-evenly;
+      align-items: baseline; } }
+  .fullnav .m-button {
+    position: absolute;
+    right: 0;
+    margin: 15px 15px 0 0;
+    padding: 0 15px;
+    line-height: 35px;
+    height: auto;
+    background-color: #FAF776; }
+    .fullnav .m-button img {
+      width: 17px; }
+  .fullnav .biglogo {
+    width: 100%;
+    text-align: center;
+    padding-top: 60px;
+    /* @include lg {
+         text-align: left;
+         width: 33%;
+         display: inline-block;
+         margin-top: 200px;
+     }*/ }
+    .fullnav .biglogo object {
+      width: 60px;
+      vertical-align: sub; }
+    .fullnav .biglogo span {
+      font-weight: bolder;
+      color: black;
+      display: block;
+      font-size: 12px;
+      font-family: "Montserrat", sans-serif; }
+    @media (min-width: 992px) {
+      .fullnav .biglogo {
+        width: auto;
+        flex-basis: 80%; }
+        .fullnav .biglogo object {
+          width: 100px; } }
+  .fullnav .menuitems {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    /*@include lg {
+        text-align: left;
+        width: 33%;
+        display: inline-block;
+        position: relative;
+    }*/ }
+    @media (min-width: 992px) {
+      .fullnav .menuitems {
+        padding: 0 100px 0 250px; } }
+    .fullnav .menuitems ul {
+      padding-left: 0 !important;
+      list-style-type: none; }
+      .fullnav .menuitems ul li {
+        position: relative;
+        margin-bottom: 20px;
+        text-align: left;
+        color: black;
+        text-transform: uppercase;
+        font-size: 19px;
+        padding: 5px 0 5px 5px; }
+        .fullnav .menuitems ul li.selected {
+          color: black;
+          font-weight: bolder; }
+          .fullnav .menuitems ul li.selected::before {
+            right: 0; }
+        .fullnav .menuitems ul li::before {
+          content: "";
+          position: absolute;
+          background-color: #FAF776;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 100%;
+          transition: right 0.2s ease-in-out;
+          z-index: -1; }
+        .fullnav .menuitems ul li:hover::before {
+          right: 0; }
+  @media (min-width: 992px) {
+    .fullnav hr {
+      display: none; } }
+  .fullnav .footer {
+    text-align: center;
+    /*@include lg {
+        width: 30%;
+        display: inline-block;
+        position: relative;
+    }*/ }
+    @media (min-width: 992px) {
+      .fullnav .footer {
+        width: 100%; } }
+    .fullnav .footer h4 {
+      font-family: "Source Code Pro", monospace;
+      font-size: 17px;
+      margin-bottom: 0;
+      color: black; }
+    .fullnav .footer p {
+      font-family: "Source Code Pro", monospace;
+      color: gray;
+      margin-top: 0;
+      font-size: 13px; }
+    .fullnav .footer table {
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 13px; }
+      .fullnav .footer table tr td {
+        text-align: left;
+        padding-left: 10px; }
+        .fullnav .footer table tr td a {
+          text-decoration: none;
+          color: gray; }
+        .fullnav .footer table tr td i {
+          font-size: 13px; }
+
+@keyframes showmenu {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes hidemenu {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+.disableScroll {
+  margin: 0 !important;
+  height: 100% !important;
+  overflow: hidden !important; }
+
 #header h1 {
   font-size: 3rem;
   font-weight: 700;

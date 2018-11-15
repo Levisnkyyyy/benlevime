@@ -7,10 +7,9 @@
   <meta name="keywords" content="HTML,CSS,XML,JavaScript">
   <meta name="author" content="Ben Levi">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="https://blokkfont-losgordos.netdna-ssl.com/v2/blokkfont.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="css/uikit.min.css" />
-	<link rel="stylesheet" href="css/style2.css?v=4" />
-    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/uikit.min.css" />
+	<link rel="stylesheet" href="css/style2.css?v=412" />
+    <link rel="stylesheet" href="css/iconmonstr-iconic-font.min.css" />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/aos.css" />
     
@@ -38,18 +37,69 @@
 <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z" fill="#1040e2"/><path d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z"/></svg>
 -->
 
+    <div class="outercircle">
+        <svg class="ycircle" height="100" width="100">
+            <circle cx="50" cy="50" r="40" fill="#FAF776" />
+          </svg> 
+    </div>
+    <div class="innercircle">
+        <svg class="wcircle" height="100" width="100">
+            <circle cx="50" cy="50" r="40" fill="white" />
+          </svg> 
+    </div>
+    <div class="fullnav">
+        <div class="uk-button m-button back">
+            <img src="img/arrowblack.png" />
+        </div>
+        <div class="uk-container">
+        <div class="biglogo">
+                <object class="" type="image/svg+xml" data="img/logo.svg" style=" height: auto;">
+                    No SVG to remove this line
+                  </object>
+                  <span>
+                      ENLEVI
+                  </span>
+        </div>
+        <div class="menuitems">
+            <ul>
+                <li class="selected">Homepage
+                    
+                </li>
+                <li>About Me
+                       
+                </li>
+                <li>My Projects
+                        
+                </li>
+                <li>Contact
+                        
+                </li>
+            </ul>
+        </div>
+        <hr class="uk-divider-icon">
+        <div class="footer">
+            <h4>Do you have any questions?</h4>
+            <p>Feel free to ask.</p>
+            <table>
+                <tr><td><i class="im im-phone"></i></td> <td><a href="tel:+972546327994">+(972)-546327994</a></td></tr>
+                <tr><td><i class="im im-mail"></i></td> <td><a href="mailto:benschool01@gmail.com">benschool01@gmail.com</a></td></tr>
+            </table>
+        </div>
+    </div>
+    </div>
 
-
-	<div class="uk-section uk-position-relative" id="header" style="max-height: 100vh; margin-bottom: 40px; background-color: ; padding-top: 20px !important;   ">
+	<div class="uk-section uk-position-relative" id="header" style="max-height: 100vh; margin-bottom: 40px; padding-top: 20px !important;   ">
         <div class="topbar">
             <div class="uk-container uk-position-relative">
                 <div class="uk-float-left">
-                        <img src="img/logo.png" class=" " style="width: 30px; background-color: white; vertical-align:baseline;" />
+                <object class="" type="image/svg+xml" data="img/logo.svg" style="width: 30px; height: auto;">
+				No SVG to remove this line
+			  </object>
                 </div>
                 <div class="uk-position-absolute" style="font-family:'Montserrat',sans-serif; font-weight: bold; left: 50%; top: 50%; transform:translate(-50%,-50%); color: black;">
                     BENLEVI
                 </div>
-                <div class="uk-float-right" style="margin-top: 10px;">
+                <div class="menubtn uk-float-right" style="margin-top: 10px;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg>
                 </div>
             </div>
@@ -224,6 +274,28 @@
                 $(".myself div:first-child").removeAttr('data-aos','');
                 $(".myself div:nth-child(2)").removeAttr('data-aos','');
             }
+            var fullnav = $('.fullnav');
+            $( ".menubtn" ).click(function() { //SHOW MENU
+               $('.outercircle,.innercircle').css('transform', 'scale(40)');
+               fullnav.css('display', 'block');
+                
+               fullnav.css('animation', 'showmenu 400ms ease-out 800ms forwards');
+               $('body,html').addClass('disableScroll');
+              /* setTimeout(
+                   function(){
+                    fullnav.css('opacity', '1');
+                   }, 800);      */             
+            });
+            $('.back').click(function(){ //HIDE MENU
+                $('.outercircle,.innercircle').css('transform', 'scale(0)');
+                $('body,html').removeClass('disableScroll');
+                fullnav.css('animation', 'hidemenu 400ms ease-out forwards');
+                setTimeout(
+                   function(){
+                    
+                    fullnav.css('display', 'none');
+                   }, 400);
+            });
 			AOS.init();
 			
 
