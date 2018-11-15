@@ -9,7 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/uikit.min.css" />
 	<link rel="stylesheet" href="css/style2.css?v=412" />
-    <link rel="stylesheet" href="css/iconmonstr-iconic-font.min.css" />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/aos.css" />
     
@@ -62,16 +61,16 @@
         </div>
         <div class="menuitems">
             <ul>
-                <li class="selected">Homepage
+                <li class="selected" ref="home">Homepage
                     
                 </li>
-                <li>About Me
+                <li ref="aboutme">About Me
                        
                 </li>
-                <li>My Projects
+                <li ref="projects">My Projects
                         
                 </li>
-                <li>Contact
+                <li ref="contact">Contact
                         
                 </li>
             </ul>
@@ -81,14 +80,14 @@
             <h4>Do you have any questions?</h4>
             <p>Feel free to ask.</p>
             <table>
-                <tr><td><i class="im im-phone"></i></td> <td><a href="tel:+972546327994">+(972)-546327994</a></td></tr>
-                <tr><td><i class="im im-mail"></i></td> <td><a href="mailto:benschool01@gmail.com">benschool01@gmail.com</a></td></tr>
+                <tr><td><i class="fas fa-phone"></i></td> <td><a href="tel:+972546327994">+(972)-546327994</a></td></tr>
+                <tr><td><i class="far fa-envelope"></i></td> <td><a href="mailto:benschool01@gmail.com">benschool01@gmail.com</a></td></tr>
             </table>
         </div>
     </div>
     </div>
 
-	<div class="uk-section uk-position-relative" id="header" style="max-height: 100vh; margin-bottom: 40px; padding-top: 20px !important;   ">
+	<div class="uk-section uk-position-relative" id="home" style="max-height: 100vh; margin-bottom: 40px; padding-top: 20px !important;   ">
         <div class="topbar">
             <div class="uk-container uk-position-relative">
                 <div class="uk-float-left">
@@ -145,8 +144,7 @@
 			  </object>
                 </div>
                 <div data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                        My name is Ben and I'm from Israel. I'm a 22 years old young guy, wishing to become a professional
-                    freelance web developer. Since childhood I was into developping stuff, and fell in love with web development.
+                        My name is Ben and I'm from Israel. I'm a 22 years old guy making efforts to become a professional web developer. Since childhood I was into developping stuff, and fell in love with web development.
                     I can design & build various types of websites, from single-page websites to anything else you desire. I make my websites responsive, mobile-first and put emphasis on UX design. 
                     
                  </div>
@@ -232,7 +230,7 @@
           </div>
         </div>
     </div>
-    <div class="uk-section">
+    <div class="uk-section" id="projects">
         <div class="uk-container">
                 <div class="sectiontitle">
                         <div class="number">02</div>
@@ -276,7 +274,13 @@
             }
             var fullnav = $('.fullnav');
             $( ".menubtn" ).click(function() { //SHOW MENU
-               $('.outercircle,.innercircle').css('transform', 'scale(40)');
+                showMenu();
+            });
+            $('.back').click(function(){ //HIDE MENU
+                hideMenu();
+            });
+            function showMenu() {
+                $('.outercircle,.innercircle').css('transform', 'scale(40)');
                fullnav.css('display', 'block');
                 
                fullnav.css('animation', 'showmenu 400ms ease-out 800ms forwards');
@@ -284,9 +288,9 @@
               /* setTimeout(
                    function(){
                     fullnav.css('opacity', '1');
-                   }, 800);      */             
-            });
-            $('.back').click(function(){ //HIDE MENU
+                   }, 800);      */     
+            }
+            function hideMenu() {
                 $('.outercircle,.innercircle').css('transform', 'scale(0)');
                 $('body,html').removeClass('disableScroll');
                 fullnav.css('animation', 'hidemenu 400ms ease-out forwards');
@@ -295,6 +299,13 @@
                     
                     fullnav.css('display', 'none');
                    }, 400);
+            }
+            $('.fullnav .menuitems ul li').click(function(){
+                var toid = $(this).attr('ref');
+                hideMenu();
+                $('html, body').animate({
+                    scrollTop: $("#"+toid + " .sectiontitle").offset().top
+                }, 1000);
             });
 			AOS.init();
 			

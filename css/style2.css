@@ -160,31 +160,31 @@ body {
   height: 100% !important;
   overflow: hidden !important; }
 
-#header h1 {
+#home h1 {
   font-size: 3rem;
   font-weight: 700;
   font-family: "Tiempos", serif; }
   @media (min-width: 576px) {
-    #header h1 {
+    #home h1 {
       font-size: 64px; } }
-#header .social {
+#home .social {
   position: absolute;
   color: black; }
   @media (max-width: 576px) {
-    #header .social {
+    #home .social {
       bottom: 5px;
       left: 50%;
       transform: translateX(-50%); } }
-  #header .social div {
+  #home .social div {
     display: inline-block;
     margin-right: 15px; }
   @media (min-width: 768px) {
-    #header .social {
+    #home .social {
       right: 0;
       margin-right: 16px;
       top: 50%;
       transform: translateY(-50%); }
-      #header .social div {
+      #home .social div {
         margin-bottom: 15px;
         margin-right: 0;
         display: block; } }
