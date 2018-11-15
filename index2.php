@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="https://blokkfont-losgordos.netdna-ssl.com/v2/blokkfont.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="css/uikit.min.css" />
-	<link rel="stylesheet" href="css/style2.css?v=341242" />
+	<link rel="stylesheet" href="css/style2.css?v=4" />
     <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/aos.css" />
@@ -40,7 +40,7 @@
 
 
 
-	<div class="uk-section uk-position-relative" id="header" style=" background-color: ; padding-top: 20px !important;   " uk-height-viewport="offset-top: true; ">
+	<div class="uk-section uk-position-relative" id="header" style="max-height: 100vh; margin-bottom: 40px; background-color: ; padding-top: 20px !important;   ">
         <div class="topbar">
             <div class="uk-container uk-position-relative">
                 <div class="uk-float-left">
@@ -75,6 +75,9 @@
             <div class="uk-button m-button">
                 Get in touch
             </div>
+            <div class="uk-button o-button uk-visible@s">
+                View my work
+            </div>
         </div>
             
         </div>
@@ -82,11 +85,14 @@
     <div class="uk-section uk-height-viewport" id="aboutme" style="margin-top: -20px;">
         <div class="uk-container">
             <div class="sectiontitle">
+                    <div class="number">01</div>
           <h2><mark>About Me</mark></h2>
           <p>Who am I & What I do</p></div>
           <div class="myself">
                 <div data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                        <img src="https://via.placeholder.com/150" width="150" />
+                <object class="" type="image/svg+xml" data="img/drawing.svg" style="width: 150px; height: auto;">
+				No SVG to remove this line
+			  </object>
                 </div>
                 <div data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
                         My name is Ben and I'm from Israel. I'm a 22 years old young guy, wishing to become a professional
@@ -179,8 +185,10 @@
     <div class="uk-section">
         <div class="uk-container">
                 <div class="sectiontitle">
+                        <div class="number">02</div>
                      <h2><mark>My Projects</mark></h2>
                      <p>Things I have done</p>
+                     
                 </div>
                 <div class="project">
                 <div>
@@ -198,14 +206,15 @@
           </div>
         </div>
     </div>
-    <div class="uk-section contact">
-        <div class="uk-container">
+    <!----div class="uk-section contact">
+        <img src="img/bg3.jpg" style="width: 100%; height: auto; filter: blur(2px);" />
+        <div class="box">
                 <div class="sectiontitle">
                      <h2><mark>Get In Touch</mark></h2>
                      <p>Leave a message</p>
                 </div>
         </div>
-    </div>
+    </div-->
 
 
 		<script>

@@ -1,4 +1,4 @@
-$main-color: #B1F8F2;
+$main-color: #FAF776;
 $accent-color: #ad52a2;
 $tri-color: #D6F071;
 
@@ -106,6 +106,7 @@ $screen-xl-min: 1200px;
             font-weight: 700;
             line-height: 22px;
             margin-bottom: 0 !important;
+            margin-top: 0 !important;
         }
         p {
             font-weight: 300;
@@ -114,6 +115,12 @@ $screen-xl-min: 1200px;
             color: #aaaaaa;
             line-height: 22px;
             margin-top: 0 !important;
+        }
+        .number {
+            line-height: 38px;
+            color: black;
+            font-weight: bolder;
+            font-size: 14px;
         }
     }
     .topbar{
@@ -221,9 +228,9 @@ $screen-xl-min: 1200px;
             
             -webkit-transition: right 0.09s ease-in;
         }
-        &:hover:before {
+       /* &:hover:before {
             right: 0;
-        }
+        }*/
     }
 
     .flexexpertise{
@@ -279,8 +286,18 @@ $screen-xl-min: 1200px;
         }
     }
     .contact {
-        background-color: $main-color;
-        height: 300px;
+        img {
+            vertical-align: middle;
+    border-style: none;
+        }
+        .box {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            
+        }
     }
     .project {
         display: flex;
