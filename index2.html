@@ -8,7 +8,7 @@
   <meta name="author" content="Ben Levi">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/uikit.min.css" />
-	<link rel="stylesheet" href="css/style2.css?v=412" />
+	<link rel="stylesheet" href="css/style2.css?v=4123" />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/aos.css" />
     
@@ -56,7 +56,7 @@
                     No SVG to remove this line
                   </object>
                   <span>
-                      ENLEVI
+                      BENLEVI
                   </span>
         </div>
         <div class="menuitems">
@@ -280,7 +280,7 @@
                 hideMenu();
             });
             function showMenu() {
-                $('.outercircle,.innercircle').css('transform', 'scale(40)');
+                $('.outercircle,.innercircle').addClass('scaleMenuUp');
                fullnav.css('display', 'block');
                 
                fullnav.css('animation', 'showmenu 400ms ease-out 800ms forwards');
@@ -291,7 +291,7 @@
                    }, 800);      */     
             }
             function hideMenu() {
-                $('.outercircle,.innercircle').css('transform', 'scale(0)');
+                $('.outercircle,.innercircle').removeClass('scaleMenuUp');
                 $('body,html').removeClass('disableScroll');
                 fullnav.css('animation', 'hidemenu 400ms ease-out forwards');
                 setTimeout(

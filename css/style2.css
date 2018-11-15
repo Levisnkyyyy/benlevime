@@ -160,6 +160,15 @@ body {
   height: 100% !important;
   overflow: hidden !important; }
 
+.scaleMenuUp {
+  transform: scale(40); }
+  @media (min-width: 992px) {
+    .scaleMenuUp {
+      transform: scale(70); } }
+  @media (min-width: 1200px) {
+    .scaleMenuUp {
+      transform: scale(100); } }
+
 #home h1 {
   font-size: 3rem;
   font-weight: 700;

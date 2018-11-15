@@ -18,7 +18,7 @@ $screen-lg-min: 992px;
 // Large tablets and desktops
 $screen-xl-min: 1200px;
 
-
+$screen-xxl-min: 1600px;
 @mixin rsm {
     @media (max-width: #{$screen-sm-min}) {
         @content;
@@ -51,6 +51,12 @@ $screen-xl-min: 1200px;
         @content;
     }
  }
+ @mixin xxl {
+    @media (min-width: #{$screen-xxl-min}) {
+        @content;
+    }
+ }
+
 
         body {
             text-rendering: optimizeLegibility;
@@ -250,6 +256,15 @@ $screen-xl-min: 1200px;
     }
     .disableScroll {
         margin: 0 !important; height: 100% !important; overflow: hidden !important;
+    }
+    .scaleMenuUp{
+        transform: scale(40);
+        @include lg {
+            transform: scale(70);
+        }
+        @include xl {
+            transform: scale(100);
+        }
     }
     #home {
         
