@@ -8,20 +8,23 @@
   <meta name="author" content="Ben Levi">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/uikit.min.css" />
-	<link rel="stylesheet" href="css/style2.css?v=4123" />
+	<link rel="stylesheet" href="css/style3.css?v=4123" />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/aos.css" />
+    
     
 	<meta name="theme-color" content="#000000" />
 	<meta name="msapplication-navbutton-color" content="#000000">
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000000">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="js/uikit.js"></script>
-	<script src="js/aos.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
-    <script src="js/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/anime.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <!---script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="js/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script-->
 
-<link href="https://fonts.googleapis.com/css?family=Montserrat|Muli|Lato:300,900|Source+Sans+Pro:300,400,700|Source+Code+Pro:300,400" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:700,900|Poppins|Lato:300,900|Roboto|Source+Code+Pro:300,400" rel="stylesheet">
 <style>
 @font-face {
   font-family: "Tiempos";
@@ -38,7 +41,7 @@
 
     <div class="outercircle">
         <svg class="ycircle" height="100" width="100">
-            <circle cx="50" cy="50" r="40" fill="#FAF776" />
+            <circle cx="50" cy="50" r="40" fill="#75387d" />
           </svg> 
     </div>
     <div class="innercircle">
@@ -48,7 +51,7 @@
     </div>
     <div class="fullnav">
         <div class="uk-button m-button back">
-            <img src="img/arrowblack.png" />
+            <img src="img/arrowwhite.png" />
         </div>
         <div class="uk-container">
         <div class="biglogo">
@@ -61,17 +64,26 @@
         </div>
         <div class="menuitems">
             <ul>
-                <li class="selected" ref="home">Homepage
-                    
+                <li class="selected" ref="home" d="0">
+                    Homepage
+                    <svg width="100%" height="100%">
+                            <rect width="100%" height="100" style="fill:#75387d" />
+                          </svg> 
                 </li>
-                <li ref="aboutme">About Me
-                       
+                <li ref="aboutme" d="1">About Me
+                        <svg width="100%" height="100%">
+                                <rect data="1" width="0" height="100" style="fill:#75387d" />
+                              </svg> 
                 </li>
-                <li ref="projects">My Projects
-                        
+                <li ref="projects" d="2">My Projects
+                        <svg width="100%" height="100%">
+                                <rect data="2" width="0" height="100" style="fill:#75387d" />
+                              </svg> 
                 </li>
-                <li ref="contact">Contact
-                        
+                <li ref="contact" d="3">Contact
+                        <svg width="100%" height="100%">
+                                <rect data="3" width="0" height="100" style="fill:#75387d" />
+                              </svg> 
                 </li>
             </ul>
         </div>
@@ -87,7 +99,7 @@
     </div>
     </div>
 
-	<div class="uk-section uk-position-relative" id="home" style="max-height: 100vh; margin-bottom: 40px; padding-top: 20px !important;   ">
+	<div class="uk-section uk-position-relative" id="home" style="max-height: 100vh; min-height: 500px; margin-bottom: 40px; padding-top: 20px !important;   ">
         <div class="topbar">
             <div class="uk-container uk-position-relative">
                 <div class="uk-float-left">
@@ -95,7 +107,7 @@
 				No SVG to remove this line
 			  </object>
                 </div>
-                <div class="uk-position-absolute" style="font-family:'Montserrat',sans-serif; font-weight: bold; left: 50%; top: 50%; transform:translate(-50%,-50%); color: black;">
+                <div class="benlevi uk-position-absolute" style="font-family:'Montserrat',sans-serif; font-weight: bold; left: 50%; top: 50%; transform:translate(-50%,-50%); color: black;">
                     BENLEVI
                 </div>
                 <div class="menubtn uk-float-right" style="margin-top: 10px;">
@@ -254,6 +266,15 @@
           </div>
         </div>
     </div>
+    <div class="uk-section" id="contact">
+        <div class="uk-container">
+            <div class="sectiontitle">
+                <div class="number">03</div>
+                <h2><mark>Contact Me</mark></h2>
+                <p>At anytime</p>
+            </div>
+        </div>
+    </div>
     <!----div class="uk-section contact">
         <img src="img/bg3.jpg" style="width: 100%; height: auto; filter: blur(2px);" />
         <div class="box">
@@ -268,7 +289,7 @@
 		<script>
 		$( document ).ready(function() {
             var wwidth = $(window).width();
-            if(wwidth <= 576) {
+            if(wwidth <= 576) { // Disabling animations for narrow-screen devices
                 $(".myself div:first-child").removeAttr('data-aos','');
                 $(".myself div:nth-child(2)").removeAttr('data-aos','');
             }
@@ -282,13 +303,12 @@
             function showMenu() {
                 $('.outercircle,.innercircle').addClass('scaleMenuUp');
                fullnav.css('display', 'block');
-                
                fullnav.css('animation', 'showmenu 400ms ease-out 800ms forwards');
                $('body,html').addClass('disableScroll');
-              /* setTimeout(
-                   function(){
-                    fullnav.css('opacity', '1');
-                   }, 800);      */     
+              //setTimeout(
+                //   function(){
+               //     fullnav.css('opacity', '1');
+                 //  }, 800);      */     
             }
             function hideMenu() {
                 $('.outercircle,.innercircle').removeClass('scaleMenuUp');
@@ -300,13 +320,29 @@
                     fullnav.css('display', 'none');
                    }, 400);
             }
-            $('.fullnav .menuitems ul li').click(function(){
+            $('.fullnav .menuitems ul li').click(function(){ // Clicking on an option in full page menu
                 var toid = $(this).attr('ref');
                 hideMenu();
                 $('html, body').animate({
                     scrollTop: $("#"+toid + " .sectiontitle").offset().top
                 }, 1000);
             });
+            var currentel;
+           
+            function lihovered(element, w){
+                var lihover = anime({
+                targets: element,
+                width: w,
+                duration: 400,
+                autoplay: true,
+                easing: 'easeInOutCirc',
+                loop: false
+            });
+                
+            }
+            
+            
+            $('.menuitems ul li').hover(function() { lihovered('rect[data="'+$(this).attr('d')+'"]','100%'); }, function() {lihovered('rect[data="'+$(this).attr('d')+'"]','0');});
 			AOS.init();
 			
 
