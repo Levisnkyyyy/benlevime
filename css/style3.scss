@@ -268,28 +268,50 @@ $screen-xxl-min: 1600px;
         }
     }
     #home {
-        
+        min-height: 100vh;
+        @supports (-webkit-appearance:none) {
+            & {
+              min-height: calc(100vh - 56px);
+            }
+          }
         h1 {
         font-size: 3rem;
         font-weight: 700;
         font-family: $head-font;
             @include sm {
-                font-size: 64px;
+                font-size: 47px;
             }
+        }
+        .smalldivider {
+            height: 2px;
+            width: 0px;
+            background-color: black;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0.4;
         }
         .social {
             position: absolute;
-            
+
             color: black;
             @include rsm {
                 bottom: 5px;
             left: 50%;
             transform: translateX(-50%);
         }
+
             div {
                 display: inline-block;
                 margin-right: 15px;
             }
+            div:nth-child(3) {
+                margin-right: 0;
+            }
+            .contain {
+                margin-right: 0;
+            }
+
             @include md {
                 right: 0;
                 margin-right: 16px;
@@ -305,8 +327,34 @@ $screen-xxl-min: 1600px;
     }
 
     #aboutme {
-     //   background-color: $main-color;
-     //   color: white;
+     
+
+        .myself {
+           // background-color: white;
+            color: #222;
+          //  border-radius: 18px;
+         //   border: 1px solid #f6f6f6;
+            display: flex;
+            flex-flow: row wrap;
+            margin-bottom: 40px;
+            @include md {
+                flex-flow: row;
+            }
+            div:first-child {
+                flex-basis: 100%;
+                text-align: center;
+                @include rsm {
+                    margin-bottom: 20px;
+                }
+            }
+            div:nth-child(2) {
+                text-align: center;
+                @include md {
+                    text-align: left;
+                    margin-top: 50px;
+                }
+            }
+        }
     }
     .sectiontitle { 
         h2 {
@@ -457,7 +505,7 @@ $screen-xxl-min: 1600px;
             text-align: center;
             h4 {
                 margin-top: 10px !important;
-                font-family: $second-font;
+                font-family: $main-font;
                 font-size: 17px;
             }
             svg {
@@ -480,26 +528,7 @@ $screen-xxl-min: 1600px;
             
         }
     }
-    .myself {
-        display: flex;
-        flex-flow: row wrap;
-        margin-bottom: 40px;
-        @include md {
-            flex-flow: row;
-        }
-        div:first-child {
-            flex-basis: 100%;
-            text-align: center;
-            @include rsm {
-                margin-bottom: 20px;
-            }
-        }
-        div:nth-child(2) {
-            @include rsm {
-                text-align:center;
-            }
-        }
-    }
+
     .contact {
         img {
             vertical-align: middle;
@@ -543,7 +572,67 @@ $screen-xxl-min: 1600px;
             }
         }
     }
-    #contact {
-        background-color: $main-color;
+    #footer {
+        margin-top: 100px;
+        background-color: #1a1b25;
         color: white;
+        text-align: center;
+        .sectiontitle {
+            mark {
+                
+                color: white;
+            }
+        }
+        min-height: 500px;
+        .contactbox {
+            background-color: $main-color;
+            border-radius: 5px;
+            height: 150px;
+            box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2),0 0 0 1px $main-color;
+            width: 70%;
+            top: -75px;
+            left: 50%;
+            transform: translate(-50%,0);
+            padding: 10px 25px 10px 25px;
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                
+                height: 100%;
+                div:nth-child(2) {
+                    display: none;
+                }
+                @include lg {
+                    flex-wrap: nowrap;
+                    align-items: center;
+                    div {
+                        flex-basis: 33%;
+                    }
+                    div:nth-child(2)
+                    {
+                        display: block;
+                    }
+                }
+                
+                h2 {
+                    color: white;
+                    font-family: $head-font;
+                    font-size: 24px;
+                    font-weight: 700 !important;
+                }
+                .m-button {
+                    border-color: white;
+                    background-color: transparent;
+                    color: white;
+                    &:before {
+                        background-color: white;
+                    }
+                    &:hover {
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+        
     }

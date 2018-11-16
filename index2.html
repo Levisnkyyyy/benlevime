@@ -98,12 +98,13 @@
         </div>
     </div>
     </div>
-
-	<div class="uk-section uk-position-relative" id="home" style="max-height: 100vh; min-height: 500px; margin-bottom: 40px; padding-top: 20px !important;   ">
+    
+	<div class="uk-section uk-position-relative" id="home" style="  margin-bottom: 40px; padding-top: 20px !important;   ">
         <div class="topbar">
             <div class="uk-container uk-position-relative">
                 <div class="uk-float-left">
-                <object class="" type="image/svg+xml" data="img/logo.svg" style="width: 30px; height: auto;">
+                        
+                <object class="" type="image/svg+xml" data="img/logo.svg" style="width: 40px; height: auto;">
 				No SVG to remove this line
 			  </object>
                 </div>
@@ -128,22 +129,24 @@
                 </div>
            </div>
         </div>
-        <div class="uk-container uk-container-small">
+        <div class="uk-container">
         
             <div class="headline uk-text-center uk-margin-xlarge-top">
                 <h1>I <mark>design</mark> & <mark>build</mark> things on the internet.</h1>
-                <p>I'm a Freelance Web Designer & Web Developer based in Haifa, Israel. I have a serious passion to simple designs, and creating a unique user experience.</p>
-            <div class="uk-button m-button">
+                <p>A fullstack web developer with a passion to simplicity and user experience.<!--I'm a Freelance Web Designer & Web Developer based in Haifa, Israel. I have a serious passion to simple designs, and creating a unique user experience.</p>
+                --></p>
+                <div class="smalldivider uk-visible@m uk-margin-bottom"></div>
+                <div class="uk-button m-button uk-margin-medium-top">
                 Get in touch
             </div>
-            <div class="uk-button o-button uk-visible@s">
+            <div class="uk-button o-button uk-visible@s uk-margin-medium-top">
                 View my work
             </div>
         </div>
             
         </div>
     </div>
-    <div class="uk-section uk-height-viewport" id="aboutme" style="margin-top: -20px;">
+    <div class="uk-section uk-height-viewport uk-position-relative" id="aboutme" style="margin-top: -20px;">
         <div class="uk-container">
             <div class="sectiontitle">
                     <div class="number">01</div>
@@ -151,6 +154,7 @@
           <p>Who am I & What I do</p></div>
           <div class="myself">
                 <div data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-out">
+
                 <object class="" type="image/svg+xml" data="img/drawing.svg" style="width: 150px; height: auto;">
 				No SVG to remove this line
 			  </object>
@@ -266,13 +270,24 @@
           </div>
         </div>
     </div>
-    <div class="uk-section" id="contact">
-        <div class="uk-container">
-            <div class="sectiontitle">
-                <div class="number">03</div>
-                <h2><mark>Contact Me</mark></h2>
-                <p>At anytime</p>
+    <div class="uk-section uk-position-relative" id="footer">
+        <div class="contactbox uk-position-absolute">
+            <div class="container">
+                <div>
+                        <h2>Let's work together</h2>
+                </div>
+                <div>
+                    Have a project in your mind? I will be more than happy to work with you.
+                </div>
+                <div>
+                    <button class="uk-button m-button">Chat with me</button>
+                </div>
             </div>
+        </div>
+        <div class="uk-container uk-text-center uk-margin-large-top">
+                <object class="" type="image/svg+xml" data="img/whitelogo.svg" style="width: 40px; height: auto;">
+                    No SVG to remove this line
+                  </object>
         </div>
     </div>
     <!----div class="uk-section contact">
@@ -309,6 +324,8 @@
                 //   function(){
                //     fullnav.css('opacity', '1');
                  //  }, 800);      */     
+ 
+
             }
             function hideMenu() {
                 $('.outercircle,.innercircle').removeClass('scaleMenuUp');
@@ -327,7 +344,15 @@
                     scrollTop: $("#"+toid + " .sectiontitle").offset().top
                 }, 1000);
             });
-            var currentel;
+            var smalldivide = anime({
+               targets: ".smalldivider",
+               width: "120px",
+               duration: 1000,
+               autoplay: true,
+               easing: 'easeInOutQuart',
+               delay: 400,
+               loop: false 
+            });
            
             function lihovered(element, w){
                 var lihover = anime({
